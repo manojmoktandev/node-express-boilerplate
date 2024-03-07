@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "75369259-ab9f-4715-a284-0399f6f81ce1",
+		"name": "AUTH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4849710",
+		"_collection_link": "https://blue-satellite-335092.postman.co/workspace/Team-Workspace~ddeee5af-01b3-4870-892e-5578a41afc88/collection/4849710-75369259-ab9f-4715-a284-0399f6f81ce1?action=share&source=collection_link&creator=4849710"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Manoj Moktan",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "manojmoktanhunkers@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "manoj@2023",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/v1/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "nirmala@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "nirmala@2023",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/v1/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "GET LOGIN USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{LOGIN_ACCESS_TOKEN}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "manoj@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/v1/auth/get-loginuser"
+			},
+			"response": []
+		},
+		{
+			"name": "REFRESH TOKEN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWNlYmY3MTcwMDQ3NDI2ZDhjMjIzMzAiLCJpYXQiOjE3MDgyMjU5NDYsImV4cCI6MTcxMDgxNDM0NiwidHlwZSI6InJlZnJlc2gifQ.dio5HwsT5XiINmf9XT-_ZLVaZ5KThIzh_uSdOGzNo-s"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refreshToken",
+							"value": "{{LOGIN_REFRESH_TOKEN}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/v1/auth/refresh-tokens"
+			},
+			"response": []
+		},
+		{
+			"name": "FORGOT PASSWORD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{LOGIN_ACCESS_TOKEN}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "manojmoktanhunkers@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/v1/auth/forgot-password"
+			},
+			"response": []
+		},
+		{
+			"name": "RESET PASSWORD",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWNlYmY3MTcwMDQ3NDI2ZDhjMjIzMzAiLCJpYXQiOjE3MDgyMjU5NDYsImV4cCI6MTcxMDgxNDM0NiwidHlwZSI6InJlZnJlc2gifQ.dio5HwsT5XiINmf9XT-_ZLVaZ5KThIzh_uSdOGzNo-s"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "manoj@2023",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/auth/reset-password?token={{LOGIN_RESET_PASSWORD_TOKEN}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"auth",
+						"reset-password"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{LOGIN_RESET_PASSWORD_TOKEN}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SEND VERIFICATION EMAIL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{LOGIN_ACCESS_TOKEN}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "manojmoktanhunkers@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "manoj@2023",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/v1/auth/send-verification-email"
+			},
+			"response": []
+		},
+		{
+			"name": "VERIFY EMAIL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWNlYmY3MTcwMDQ3NDI2ZDhjMjIzMzAiLCJpYXQiOjE3MDgyMjU5NDYsImV4cCI6MTcxMDgxNDM0NiwidHlwZSI6InJlZnJlc2gifQ.dio5HwsT5XiINmf9XT-_ZLVaZ5KThIzh_uSdOGzNo-s"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "manoj@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/auth/verify-email?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWQxN2NkOTIxN2U0ZTE3NzAxNjczNWQiLCJpYXQiOjE3MDgzOTczOTksImV4cCI6MTcwODM5Nzk5OSwidHlwZSI6InZlcmlmeUVtYWlsIn0.SydE-CeOUyXM1RK5-jxmOl6zYdJSJKbR2l5H4QubEcU",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"auth",
+						"verify-email"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWQxN2NkOTIxN2U0ZTE3NzAxNjczNWQiLCJpYXQiOjE3MDgzOTczOTksImV4cCI6MTcwODM5Nzk5OSwidHlwZSI6InZlcmlmeUVtYWlsIn0.SydE-CeOUyXM1RK5-jxmOl6zYdJSJKbR2l5H4QubEcU"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGOUT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refreshToken",
+							"value": "{{LOGIN_REFRESH_TOKEN}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/v1/auth/logout"
+			},
+			"response": []
+		}
+	]
+}

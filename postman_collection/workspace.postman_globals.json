@@ -1,0 +1,33 @@
+{
+	"id": "e6b8beeb-a110-4dfa-82ab-a1a245ef3721",
+	"values": [
+		{
+			"key": "LOGIN_ACCESS_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWNlYzAzZTRhMGFiNDQ0MTgwMjAyNWUiLCJpYXQiOjE3MDg2NDU2MTUsImV4cCI6MTcwODY0NzQxNSwidHlwZSI6ImFjY2VzcyJ9.xW9Yp-uckvhx6UtPEgeGIjA6kRyiRFTiz7xshtjaBM8",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "LOGIN_REFRESH_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWQxN2NkOTIxN2U0ZTE3NzAxNjczNWQiLCJpYXQiOjE3MDg1NTI5NTIsImV4cCI6MTcxMTE0MTM1MiwidHlwZSI6InJlZnJlc2gifQ.UoZCIwbYoYrfyusOLj1osiUe_nahQRgcMWEHLuif_Jw",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "LOGIN_RESET_PASSWORD_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWQxN2NkOTIxN2U0ZTE3NzAxNjczNWQiLCJpYXQiOjE3MDg1NTU0NjgsImV4cCI6MTcwODU1NjA2OCwidHlwZSI6InJlc2V0UGFzc3dvcmQifQ.RkmfvY7SDV5ZA5DMvpp-gTpL_v2aTrlqhl44KNrER7Q",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "VERIFY_EMAIL_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWQxN2NkOTIxN2U0ZTE3NzAxNjczNWQiLCJpYXQiOjE3MDg1NTYxNjksImV4cCI6MTcwODU1Njc2OSwidHlwZSI6InZlcmlmeUVtYWlsIn0.-ibtQoOL18LgYiv9KfG_Ld0myvhmFQ8ZUS297AUo5-4",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2024-02-26T01:48:48.979Z",
+	"_postman_exported_using": "Postman/10.23.5"
+}

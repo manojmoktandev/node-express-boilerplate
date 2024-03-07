@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "861c0171-204e-4735-b181-1ef3ccb4324e",
+		"name": "USER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4849710",
+		"_collection_link": "https://blue-satellite-335092.postman.co/workspace/Team-Workspace~ddeee5af-01b3-4870-892e-5578a41afc88/collection/4849710-861c0171-204e-4735-b181-1ef3ccb4324e?action=share&source=collection_link&creator=4849710"
+	},
+	"item": [
+		{
+			"name": "USER REGISTER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{LOGIN_ACCESS_TOKEN}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Raj Patel",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "raj.patel1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "rajpatel@2023",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/v1/users"
+			},
+			"response": []
+		},
+		{
+			"name": "GET USERS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{LOGIN_ACCESS_TOKEN}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "manoj",
+							"disabled": true
+						},
+						{
+							"key": "role",
+							"value": "user",
+							"disabled": true
+						},
+						{
+							"key": "sortBy",
+							"value": "email:desc,name:asc,role:asc",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{LOGIN_ACCESS_TOKEN}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "http://localhost:3000/v1/users/65cebf7170047426d8c22330"
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{LOGIN_ACCESS_TOKEN}}"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "rajesh patel",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/v1/users/65d681e76a4a0f45786db6a7"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{LOGIN_ACCESS_TOKEN}}"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "http://localhost:3000/v1/users/65d681e76a4a0f45786db6a7"
+			},
+			"response": []
+		}
+	]
+}
